@@ -1,0 +1,8 @@
+Sistema de Control de Rescate y Adopción Animal
+
+Este repositorio utiliza Gitflow para organizar el desarrollo del sistema.
+
+Ramas principales:
+- Principal
+- develop
+- feature/casos-rescate
