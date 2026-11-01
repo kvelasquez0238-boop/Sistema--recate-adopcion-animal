@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de rescates</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f0fa;
+            color: #333333;
+        }
+
+        header {
+            background-color: #673ab7;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #4527a0;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: #673ab7;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #673ab7;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid #d1c4e9;
+            padding: 12px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f4f0fa;
+        }
+
+        footer {
+            background-color: #4527a0;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lista de animales rescatados</h1>
+        <p>Consulta los casos de rescate registrados.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reportar.html">Reportar animal</a>
+        <a href="rescates.html">Lista de rescates</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Casos de rescate</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>N.º</th>
+                        <th>Nombre provisional</th>
+                        <th>Categoría</th>
+                        <th>Urgencia</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Firulais</td>
+                        <td>Perros</td>
+                        <td>Alta</td>
+                        <td>Perro encontrado en la calle y necesita atención.</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Michi</td>
+                        <td>Gatos</td>
+                        <td>Media</td>
+                        <td>Gato rescatado que necesita cuidados.</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Animal silvestre</td>
+                        <td>Fauna Silvestre</td>
+                        <td>Baja</td>
+                        <td>Animal encontrado y pendiente de evaluación.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Actividad 3 - Desarrollo de Sistemas Informáticos</p>
+    </footer>
+
+</body>
+</html>
