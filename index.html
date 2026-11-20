@@ -1,46 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Rescate y Adopción Animal</title>
+    <title>UI Kit - Rescate Animal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sistema de Rescate y Adopción Animal</h1>
-        <p>Bienvenido al sistema de control de rescates y adopciones.</p>
+    <header class="encabezado">
+        <h1>Rescate y Adopción Animal</h1>
+        <p>Biblioteca de componentes visuales - UI Kit</p>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="reportar.html">Reportar animal</a>
-        <a href="rescates.html">Lista de rescates</a>
-    </nav>
+    <main class="contenedor">
 
-    <main>
-        <section>
-            <h2>Panel principal</h2>
-            <p>Este sistema permite registrar animales rescatados y consultar los casos registrados.</p>
+        <section class="seccion">
+            <h2>1. Botones</h2>
+            <button class="btn btn-primario">Registrar rescate</button>
+            <button class="btn btn-secundario">Ver animales</button>
+            <button class="btn btn-peligro">Eliminar registro</button>
         </section>
 
-        <section>
-            <h2>Resumen del refugio</h2>
+        <section class="seccion">
+            <h2>2. Formularios</h2>
 
-            <article>
-                <h3>Registro de animales</h3>
-                <p>Permite ingresar información de los animales que necesitan ayuda.</p>
+            <form>
+                <label for="nombre">Nombre del animal:</label>
+                <input type="text" id="nombre" placeholder="Ingrese el nombre">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option>Seleccione una categoría</option>
+                    <option>Perro</option>
+                    <option>Gato</option>
+                    <option>Otro</option>
+                </select>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" placeholder="Describa el caso">
+
+                <button type="button" class="btn btn-primario">Guardar información</button>
+            </form>
+        </section>
+
+        <section class="seccion">
+            <h2>3. Tarjetas de animales</h2>
+
+            <article class="tarjeta">
+                <h3>🐶 Max</h3>
+                <p><strong>Tipo:</strong> Perro</p>
+                <p><strong>Estado:</strong> En recuperación</p>
+                <p>Animal rescatado que necesita un hogar responsable.</p>
+                <button class="btn btn-primario">Ver información</button>
             </article>
 
-            <article>
-                <h3>Consulta de rescates</h3>
-                <p>Permite revisar los casos de rescate registrados en el sistema.</p>
+            <article class="tarjeta">
+                <h3>🐱 Luna</h3>
+                <p><strong>Tipo:</strong> Gato</p>
+                <p><strong>Estado:</strong> Disponible para adopción</p>
+                <p>Gatita que busca una familia que la cuide.</p>
+                <button class="btn btn-primario">Ver información</button>
             </article>
         </section>
+
+        <section class="seccion">
+            <h2>4. Alertas y niveles de urgencia</h2>
+
+            <span class="badge badge-alta">Urgencia alta</span>
+            <span class="badge badge-media">Urgencia media</span>
+            <span class="badge badge-baja">Urgencia baja</span>
+        </section>
+
     </main>
 
-    <footer>
-        <p>Actividad 3 - Desarrollo de Sistemas Informáticos</p>
+    <footer class="pie">
+        <p>Actividad 5 - Desarrollo de Sistemas Informáticos</p>
+        <p>Design System - Rescate y Adopción Animal</p>
     </footer>
 
 </body>
