@@ -1,0 +1,284 @@
+
+/* 1. Variables de colores del sistema */
+:root {
+    --color-primario: #6a3d9a;
+    --color-secundario: #3498db;
+    --color-exito: #27ae60;
+    --color-error: #e74c3c;
+    --color-advertencia: #f39c12;
+    --color-fondo: #f4f1f8;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+}
+
+/* 2. Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* 3. Encabezado */
+.encabezado {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 25px;
+}
+
+/* 4. Contenedor principal */
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.seccion {
+    background-color: var(--color-blanco);
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+h2 {
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+/* 5. Botones */
+.btn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.btn-primario:hover {
+    background-color: #4b2870;
+}
+
+.btn-secundario {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.btn-secundario:hover {
+    background-color: #216b9c;
+}
+
+.btn-peligro {
+    background-color: var(--color-error);
+    color: var(--color-blanco);
+}
+
+.btn-peligro:hover {
+    background-color: #b93227;
+}
+
+.btn:focus {
+    outline: 3px solid var(--color-advertencia);
+    outline-offset: 3px;
+}
+
+/* 6. Formularios */
+form {
+    max-width: 550px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+/* Alinear las opciones de urgencia */
+input[type="radio"] + label {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    font-weight: normal;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 6px 0;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 6px 8px 6px 0;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(106, 61, 154, 0.4);
+}
+
+/* 7. Tarjetas de animales */
+.tarjeta {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    min-width: 240px;
+    margin: 10px 1%;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: var(--color-blanco);
+    border: 1px solid #dddddd;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h3 {
+    color: var(--color-primario);
+}
+
+/* 8. Alertas y etiquetas */
+.badge {
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    color: var(--color-blanco);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.badge-alta {
+    background-color: var(--color-error);
+}
+
+.badge-media {
+    background-color: var(--color-advertencia);
+    color: #333333;
+}
+
+.badge-baja {
+    background-color: var(--color-exito);
+}
+
+/* 9. Pie de página */
+.pie {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* 10. Adaptación a pantallas pequeñas */
+/* 11. Estilos para la tabla de rescates */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: var(--color-blanco);
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+@media (max-width: 600px) {
+    .contenedor {
+        width: 95%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn {
+        margin: 5px 0;
+    }
+}
+/* Menú horizontal en escritorio */
+nav.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Menú vertical en dispositivos móviles */
+@media (max-width: 767px) {
+    nav.contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    nav.contenedor a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+}
+/* Tabla adaptable en móviles */
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-responsive table {
+    min-width: 500px;
+}
+/* Organización del Dashboard con CSS Grid */
+.panel-grid {
+    display: grid ;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+
+.panel-grid h2 {
+    grid-column: 1 / -1;
+}
+
+.panel-grid article {
+    background-color: var(--color-blanco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Una columna en móviles */
+@media (max-width: 767px) {
+    .panel-grid {
+        grid-template-columns: 1fr;
+    }
+}
